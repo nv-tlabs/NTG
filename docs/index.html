@@ -1,0 +1,373 @@
+<head>
+    </head>
+    
+    <style type="text/css">
+        body {
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight:300;
+            font-size:18px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1100px;
+        }
+    
+        h1 {
+            font-weight:300;
+            margin: 0.4em;
+        }
+    
+        p {
+            margin: 0.2em;
+        }
+    
+        .disclaimerbox {
+            background-color: #eee;
+            border: 1px solid #eeeeee;
+            border-radius: 10px ;
+            -moz-border-radius: 10px ;
+            -webkit-border-radius: 10px ;
+            padding: 20px;
+        }
+    
+        video.header-vid {
+            height: 140px;
+            border: 1px solid black;
+            border-radius: 10px ;
+            -moz-border-radius: 10px ;
+            -webkit-border-radius: 10px ;
+        }
+    
+        img.header-img {
+            height: 140px;
+            border: 1px solid black;
+            border-radius: 10px ;
+            -moz-border-radius: 10px ;
+            -webkit-border-radius: 10px ;
+        }
+    
+        img.rounded {
+            border: 1px solid #eeeeee;
+            border-radius: 10px ;
+            -moz-border-radius: 10px ;
+            -webkit-border-radius: 10px ;
+        }
+    
+        a:link,a:visited
+        {
+            color: #1367a7;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #208799;
+        }
+    
+        td.dl-link {
+            height: 160px;
+            text-align: center;
+            font-size: 22px;
+        }
+    
+        .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+            box-shadow:
+                    0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                    5px 5px 0 0px #fff, /* The second layer */
+                    5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                    10px 10px 0 0px #fff, /* The third layer */
+                    10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+                    15px 15px 0 0px #fff, /* The fourth layer */
+                    15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+                    20px 20px 0 0px #fff, /* The fifth layer */
+                    20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+                    25px 25px 0 0px #fff, /* The fifth layer */
+                    25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+            margin-left: 10px;
+            margin-right: 45px;
+        }
+    
+    
+        .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+            box-shadow:
+                    0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                    5px 5px 0 0px #fff, /* The second layer */
+                    5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                    10px 10px 0 0px #fff, /* The third layer */
+                    10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 30px;
+            margin-bottom: 5px;
+        }
+    
+        .vert-cent {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    
+        hr
+        {
+            margin: 0;
+            border: 0;
+            height: 1.5px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+    </style>
+    
+    <html>
+      <head>
+            <title>NTG</title>
+            <meta property="og:title" content="NTG" />
+      </head>
+    
+      <body>
+        <br>
+        <center>
+        <span style="font-size:38px"> Neural Turtle Graphics for Modeling City Road Layouts</span>
+        </center>
+    
+        <br>
+        <table align=center width=900px>
+        <tr>
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><a href="https://chuhang.github.io/">Hang Chu</a><sup> 1,2,3</sup></span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><a href="https://scholar.google.ca/citations?user=8q2ISMIAAAAJ&hl=en">Daiqing Li</a><sup>1</sup></span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~davidj/">David Acuna</a><sup>1,2,3</sup></span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                    <center>
+                    <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~amlan/">Amlan Kar</a><sup>1,2,3</sup></span>
+                    </center>
+            </td>    
+            <td align=center width=100px>
+                    <center>
+                    <span style="font-size:20px"><a href="http://shumash.com/">Maria Shugrina</a><sup>1,2,3</sup></span>
+                    </center>
+            </td>    
+        </tr>
+        </table>
+        <br/>
+        <table align=center width=900px>
+        <tr>
+            <td align=center width=100px>
+                    <center>
+                    <span style="font-size:20px"><a href="http://kyewei.com/">Xinkai Wei</a><sup>1</sup></span>
+                    </center>
+            </td>    
+            <td align=center width=100px>
+                    <center>
+                    <span style="font-size:20px"><a href="http://mingyuliu.net/">Ming-Yu Liu</a><sup>1,2,3</sup></span>
+                    </center>
+            </td>    
+            <td align=center width=100px>
+                    <center>
+                    <span style="font-size:20px"><a href="http://web.mit.edu/torralba/www/">Antonio Torralba</a><sup>4</sup></span>
+                    </center>
+            </td>            
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><a href="http://www.cs.toronto.edu/~fidler/">Sanja Fidler</a><sup>1,2,3</sup></span>
+                </center>
+            </td>
+         </tr>     		
+    
+        </table>
+    
+        <br>
+        <table align=center width=900px>
+           <tr>
+            <td align=center width=100px>
+            <center>
+            <span style="font-size:20px"><sup>1</sup>NVIDIA</span>
+            </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><sup>2</sup>University of Toronto</span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><sup>3</sup>Vector Institute</span>
+                </center>
+            </td>
+            <td align=center width=100px>
+                <center>
+                <span style="font-size:20px"><sup>4</sup>MIT</span>
+                </center>
+            </td>
+         </tr>
+        </table>
+        
+        <table align=center width=700px>
+           <tr>
+            <td align=center width=100px>
+            <center>
+            <span style="font-size:20px;color:red"> ICCV 2019 <b>(Oral)</b></span>
+            </center>
+            </td>
+         </tr>
+        </table>
+    
+                <br>
+                <table align=center width=900px>
+                    <tr>
+                        <td width="900px">
+                            <center>                                   
+                            <img src = "./resources/ntg_teaser.png" width="1024px" height="280px"></img>                        
+                            </center>
+                        </td>    
+                    </tr>
+
+    
+                </table>
+                <table align=center width=900px></table>
+                    <tr>
+                        <td width=600px>
+                        <br>  
+                        <center>
+                              <!--  -->
+                        </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width=600px>
+                            <br>
+                            <p align="justify" style="font-size: 18px">
+                                We propose Neural Turtle Graphics (NTG), a novel gen- erative model for spatial graphs, and demonstrate its ap- plications in modeling city road layouts. Specifically, we represent the city road layout using a graph where nodes in the graph represent control points and edges in the graph represents segment of roads. NTG is a sequential genera- tive model parameterized by a neural network. It iteratively generates a new node and an edge connecting to an existing node conditioned on the current graph. We train the NTG model on Open Street Map data and show it outperforms ex- isting generative models using a set of diverse performance metrics. Moreover, our method allows users to control styles of generated road layouts mimicking existing cities as well as to sketch a part of the city road layout to be synthesized. In addition to synthesis, the proposed NTG finds uses in an analytical task of aerial road parsing. Experimental results show that it achieves state-of-the-art performance on the SpaceNet dataset.                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+    
+              <br>
+              <hr>
+                <table align=center width=700>
+                 <center><h1>News</h1></center>
+                    <tr>
+                    <ul>
+                        <li>[Coming Soon] Demo video and the paper!</li>
+                        <li>[July 2019] Project page is up</a></li>
+                    </ul>
+                    </tr>
+                </table>
+             <br>
+             <hr>
+             <!-- <table align=center width=550px> -->
+                <table align=center width=700>
+                 <center><h1>Paper</h1></center>
+                    <tr>
+                      <td><a href="" target="_blank"><img style="height:180px; border: solid; border-radius:30px;" src="./"/></a></td>
+                      <td><span style="font-size:18px">Hang Chu, Daiqing Li, David Acuna, Amlan Kar, <br> Maria Shugrina, Xinkai Wei, Ming-Yu Liu,<br>Antonio Torralba, Sanja Fidler
+                        <br><br>
+                        Neural Turtle Graphics for Modeling City Road Layouts
+                        <br><br>
+                        ICCV, 2019. <font color='red'><b>(Oral) </b></font>(to appear) 
+                        <br>
+                        </td>
+                  </tr>
+                </table>
+                <br>
+                <table align=center width=700px>
+                  <tr>
+                      <td>  
+                        <span style="font-size:18px"><center>
+                          <a href="">[Preprint]</a>
+                        </center></td>
+    
+                      <td><span style="font-size:18px"><center>
+                          <a href="">[Bibtex]</a>
+                        </center></td>
+    
+       
+                  </tr>
+                  <tr>
+               
+                  </tr>
+                </table>
+                <br>
+
+            <hr>
+            <center><h1>NTG Model</h1></center>
+            <table align=center width=1000px>
+                <tr>
+                        <center>
+                          <img class="round" style="height:300" src="./resources/ntg_model.png"/></a>
+                        </center>
+              </tr>
+            </table>
+
+            <br>
+            <hr>
+
+            <center><h1> Results</h1></center> <br>
+
+            <table align=center width=1000px>
+                <tr>
+                    <td width=100px>
+                        <center>
+                            <a href="./resources/city_generation_result.png"><img src = "./resources/city_generation_result.png" width="1000px"></img></a><br>
+                        </center>
+                    </td>
+                    
+                <tr>
+                    <td>
+                        <center>
+                        <span style="font-size:18px">
+                                Qualitative Results on city road layout generation
+                        </span>
+                        </center>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <center>
+                            <a href="./resources/spacenet_result.png"><img src = "./resources/spacenet_result.png" width="1000px"></img></a><br>
+                        </center>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan='2'>
+                        <center>
+                        <span style="font-size:18px">
+                            Qualitative Results on SpaceNet road parsing task
+                        </span>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                        <td colspan='2'>
+                            <center>
+                                <a href="./resources/sat2sim_result.png"><img src = "./resources/sat2sim_result.png" width="1000px"></img></a><br>
+                            </center>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan='2'>
+                            <center>
+                            <span style="font-size:18px">
+                                Qualitative Results on converting satellite image into a series of simulated environments
+                            </span>
+                            </center>
+                        </td>
+                    </tr>
+
+            </table>
+            <hr>
+            <br>
+    
+    </body>
+    </html>
